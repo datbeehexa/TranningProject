@@ -1,0 +1,9 @@
+#Turn Rewrite Engine On
+RewriteEngine On
+
+#Remove .php extension form users.php
+RewriteRule ^categories/?$ categories.php [NC,L]
+
+#Rewrite URL
+RewriteRule ^categories/([0-9]+)/?$ categories.php?id=$1 [NC,L]
+

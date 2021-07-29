@@ -1,0 +1,16 @@
+#Turn Rewrite Engine On
+RewriteEngine On
+
+#Remove .php extension form users.php
+RewriteRule ^read/?$ read.php [NC,L]
+RewriteRule ^delete/?$ delete.php [NC,L]
+RewriteRule ^insert/?$ insert.php [NC,L]
+RewriteRule ^update/?$ update.php [NC,L]
+
+
+#Rewrite URL
+RewriteRule ^read/([0-9]+)/?$ read.php?id=$1 [NC,L]
+RewriteRule ^update/([0-9]+)/?$ update.php?id=$1 [NC,L]
+RewriteRule ^delete/([0-9]+)/?$ delete.php?id=$1 [NC,L]
+
+
